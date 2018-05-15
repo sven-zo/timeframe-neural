@@ -1,0 +1,71 @@
+{
+    "delivery_id": "1234",
+    "departure_time": "1526379373",
+    "amount_of_packages": "10",
+    "driver": {
+        "id": 123456,
+        "years_of_experience": 12
+    },
+    "packages": [
+        {
+            "id": 1,
+            "time_since_last_package": 900,
+            "weight": 2,
+            "fragile": true
+        },
+        {
+            "id": 2,
+            "time_since_last_package": 300,
+            "weight": 0.2,
+            "fragile": false
+        },
+        {
+            "id": 3,
+            "time_since_last_package": 760,
+            "weight": 0.3,
+            "fragile": false
+        },
+        {
+            "id": 4,
+            "time_since_last_package": 200,
+            "weight": 0.05,
+            "fragile": false
+        },
+        {
+            "id": 5,
+            "time_since_last_package": 1200,
+            "weight": 30,
+            "fragile": true
+        },
+        {
+            "id": 6,
+            "time_since_last_package": 200,
+            "weight": 0.1,
+            "fragile": false
+        },
+        {
+            "id": 7,
+            "time_since_last_package": 180,
+            "weight": 0.34,
+            "fragile": false
+        },
+        {
+            "id": 8,
+            "time_since_last_package": 200,
+            "weight": 0.6,
+            "fragile": false
+        },
+        {
+            "id": 9,
+            "time_since_last_package": 340,
+            "weight": 0.3,
+            "fragile": false
+        },
+        {
+            "id": 10,
+            "time_since_last_package": 600,
+            "weight": 0.4,
+            "fragile": false
+        }
+    ]
+}

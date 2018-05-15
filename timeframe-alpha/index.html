@@ -2,6 +2,24 @@
 
 <head>
   <title>Timeframe Alpha</title>
+  <style>
+    .settings {
+      background-color: beige;
+    }
+
+    #weight {
+      width: 100%;
+    }
+
+    * {
+      font-family: sans-serif;
+    }
+
+    #weight_value {
+      text-align: center;
+      font-size: 24px;
+    }
+  </style>
 </head>
 
 <body>
@@ -9,7 +27,21 @@
   <script src="script.js"></script>
   <div>
     <!-- Make inputs for the settings -->
+    <div class="settings">
+      <label for="weight">Weight</label>
+      <input type="range" min="0" max="100" id="weight" step="0.1">
+      <div id="weight_value">Loading...</div>
+
+      <label for="fragile">Fragile</label>
+      <input type="checkbox" id="fragile" style="margin-top: 40px">
+    </div>
     <!-- Show outputs -->
+    <div class="output">
+      <h2>Time since last delivery:</h2>
+      <h1 id="score">Calculating seconds...</h1>
+      <h1 id="score-minutes">Calculating minutes...</h1>
+      <h1 id="score-hour">Calculating hours...</h1>
+    </div>
   </div>
 </body>
 
