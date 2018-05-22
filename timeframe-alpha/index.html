@@ -2,22 +2,49 @@
 
 <head>
   <title>Timeframe Alpha</title>
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
   <style>
-    .settings {
-      background-color: beige;
+    body {
+      margin: 0;
     }
 
-    #weight {
+    .settings {
+      color: white;
+      padding: 10px;
+      background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .selector {
       width: 100%;
     }
 
     * {
-      font-family: sans-serif;
+      font-family: 'Space Mono', sans-serif;
     }
 
-    #weight_value {
+    .value {
       text-align: center;
       font-size: 24px;
+    }
+
+    .type {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .output {
+      display: flex;
+      padding: 10px;
+    }
+
+    .output img {
+      margin: auto;
+    }
+
+    .results {
+      min-width: 50vw;
     }
   </style>
 </head>
@@ -28,19 +55,31 @@
   <div>
     <!-- Make inputs for the settings -->
     <div class="settings">
-      <label for="weight">Weight</label>
-      <input type="range" min="0" max="100" id="weight" step="0.1">
-      <div id="weight_value">Loading...</div>
+      <label class="type" for="weight">Weight</label>
+      <div class="value" id="weight_value">Loading...</div>
+      <input class="selector" type="range" min="0" max="68" id="weight" step="0.1">
+      <label class="type" for="width">Width</label>
+      <div class="value" id="width_value">Loading...</div>
+      <input class="selector" type="range" min="0" max="274" id="width" step="0.1">
+      <label class="type" for="height">Height</label>
+      <div class="value" id="height_value">Loading...</div>
+      <input class="selector" type="range" min="0" max="274" id="height" step="0.1">
+      <label class="type" for="depth">Depth</label>
+      <div class="value" id="depth_value">Loading...</div>
+      <input class="selector" type="range" min="0" max="274" id="depth" step="0.1">
 
-      <label for="fragile">Fragile</label>
+      <label class="type" for="fragile">Fragile</label>
       <input type="checkbox" id="fragile" style="margin-top: 40px">
     </div>
     <!-- Show outputs -->
     <div class="output">
-      <h2>Time since last delivery:</h2>
-      <h1 id="score">Calculating seconds...</h1>
-      <h1 id="score-minutes">Calculating minutes...</h1>
-      <h1 id="score-hour">Calculating hours...</h1>
+      <div class="results">
+        <h2>Time since last delivery:</h2>
+        <h1 id="score">Calculating seconds...</h1>
+        <h1 id="score-minutes">Calculating minutes...</h1>
+        <h1 id="score-hour">Calculating hours...</h1>
+      </div>
+      <img src="package.svg"/>
     </div>
   </div>
 </body>
